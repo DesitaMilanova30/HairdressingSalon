@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HairDressingSalonApp.Models.Hairdresser
 {
-    public class HairdresserCreateVM
+    public class CreateHairdresserVM
     {
         [Required]
         [Display(Name = "FirstName")]

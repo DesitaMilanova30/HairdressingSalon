@@ -1,6 +1,8 @@
+using HairDressingSalonApp.Abstractions;
 using HairDressingSalonApp.Data;
 using HairDressingSalonApp.Entities;
 using HairDressingSalonApp.Infrastructure;
+using HairDressingSalonApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +42,7 @@ namespace HairDressingSalonApp
                 .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
+            services.AddTransient<IHairdresserService, HairdresserService>();
             services.AddRazorPages();
 
             services.Configure<IdentityOptions>(options =>
