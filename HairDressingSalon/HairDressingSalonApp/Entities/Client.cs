@@ -8,6 +8,11 @@ namespace HairDressingSalonApp.Entities
 {
     public class Client
     {
+        public Client()
+        {
+            this.Reservations = new HashSet<Reservation>();
+            this.Reports = new HashSet<Report>();
+        }
         [Key]
         public int Id { get; set; }
         [Required]
@@ -22,5 +27,7 @@ namespace HairDressingSalonApp.Entities
         public virtual string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
 
+        public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Report> Reports { get; set; }
     }
 }

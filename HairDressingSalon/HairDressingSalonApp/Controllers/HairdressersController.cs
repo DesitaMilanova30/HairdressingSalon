@@ -1,5 +1,6 @@
 ﻿using HairDressingSalonApp.Abstractions;
 using HairDressingSalonApp.Entities;
+using HairDressingSalonApp.Models.Client;
 using HairDressingSalonApp.Models.Hairdresser;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -24,10 +25,19 @@ namespace HairDressingSalonApp.Controllers
 
 
         // GET: HairdressersController
-        public ActionResult Index()
+      /*  public ActionResult Index()
         {
-            return View();
-        }
+            var users = _hairdresserService.GetHairdressers()
+                 .Select(u => new ListingHairdresserVM
+                 {
+                     Id = u.Id,
+                     FirstName = u.FirstName,
+                     LastName = u.LastName,
+                     PhoneNumber=u.User.PhoneNumber
+                 }).ToList();
+
+            return this.View(users);
+        }*/
 
         // GET: HairdressersController/Details/5
         public ActionResult Details(int id)
