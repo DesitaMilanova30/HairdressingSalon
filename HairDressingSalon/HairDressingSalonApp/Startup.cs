@@ -43,6 +43,7 @@ namespace HairDressingSalonApp
 
             services.AddControllersWithViews();
             services.AddTransient<IHairdresserService, HairdresserService>();
+            services.AddTransient<IClientService, ClientService>();
             services.AddRazorPages();
 
             services.Configure<IdentityOptions>(options =>

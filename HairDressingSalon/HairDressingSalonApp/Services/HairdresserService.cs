@@ -38,14 +38,14 @@ namespace HairDressingSalonApp.Services
             throw new NotImplementedException();
         }
 
-        public IHairdresserService GetHairdresserById(int hairdresser)
+        public Hairdresser GetHairdresserById(int hairdresser)
         {
             throw new NotImplementedException();
         }
 
-        public List<IHairdresserService> GetHairdressers()
+        public List<Hairdresser> GetHairdressers()
         {
-            throw new NotImplementedException();
+            return _context.Hairdressers.ToList();
         }
 
         public bool RemoveById(int hairdresser)

@@ -4,16 +4,20 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using HairDressingSalonApp.Models.Client;
 
 namespace HairDressingSalonApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Hairdresser> Hairdressers { get; set; }
+        public DbSet<Client> Clients { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
             this.Database.EnsureCreated();
         }
+        public DbSet<HairDressingSalonApp.Models.Client.CreateClientVM> CreateClientVM { get; set; }
+        public DbSet<HairDressingSalonApp.Models.Client.ListingClientVM> ListingClientVM { get; set; }
     }
 }
