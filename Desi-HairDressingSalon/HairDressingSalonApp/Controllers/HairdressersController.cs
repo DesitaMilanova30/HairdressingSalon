@@ -25,7 +25,7 @@ namespace HairDressingSalonApp.Controllers
 
 
         // GET: HairdressersController
-      /*  public ActionResult Index()
+        public ActionResult Index()
         {
             var users = _hairdresserService.GetHairdressers()
                  .Select(u => new ListingHairdresserVM
@@ -33,11 +33,11 @@ namespace HairDressingSalonApp.Controllers
                      Id = u.Id,
                      FirstName = u.FirstName,
                      LastName = u.LastName,
-                     PhoneNumber=u.User.PhoneNumber
+                     
                  }).ToList();
 
             return this.View(users);
-        }*/
+        }
 
         // GET: HairdressersController/Details/5
         public ActionResult Details(int id)

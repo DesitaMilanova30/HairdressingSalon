@@ -18,8 +18,5 @@ namespace HairDressingSalonApp.Models.Hairdresser
         public string LastName { get; set; }
 
 
-        [Display(Name = "Phone")]
-        public string PhoneNumber { get; set; }
-
     }
 }

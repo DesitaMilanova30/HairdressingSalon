@@ -8,6 +8,7 @@ namespace HairDressingSalonApp.Entities
 {
     public class Reservation
     {
+        [Key]
         public int Id { get; set; }
 
         
